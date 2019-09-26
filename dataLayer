@@ -1,0 +1,74 @@
+<head>
+
+<script>
+
+window.dataLayer = window.dataLayer || []; //Creating the dataLayer object
+
+dataLayer.push({
+
+//Page details
+‘pageName’: {{pageName}}, //Dynamic page name
+
+
+
+//IDs
+'GAID': {{cid}}, //Google Analytics client ID
+'EPCsessionID': {{EPCsessionID}}, //a common key between native app events and app-hosted reactive web-views
+'MarketoID': {{MarketoID}}, //ID assigned by Marketo
+'XDID': {{XDID}}, //gives us the ability to track visitors/users across pretty much all EG sites eventually (including HomeAway)
+'PropertyID': {{EID}}, //Expedia ID
+
+//Content details
+'Mode’: {{Mode}}, //Mode
+'Module': {{module}}, //Contactenation of modules deployed in page
+'Content': {{contentIDs}}, //Concatenation of content IDs deployed in page
+'Zone': {{zoneIDs}}, //Concatenation of zone IDs deployed in page
+'pageLayout': {{moduleIDs_contentIDs_zoneIDs}}, //Concatenation of module-content-zone IDs deployed in page regardless of whether or not they were visible
+
+//Content engagement - Data inserted by users
+'email': {{valid}}, //boolean populate if valid email collected
+'phone': {{valid}}, //boolean populate if valid phone number collected
+'propertyName': {{propertyName}}, //property name form
+'propertyStreet': {{propertyStreet}}, //property street form
+'propertyType': {{propertyType}}, //property type form
+'country': {{country}}, //country form
+'city': {{city}}, //city form
+'street': {{street}}, //street form
+'zip': {{zip}}, //zip form
+
+//Internal Search query
+'searchTerm': {{searchTerm}}, //term searched by the user in the internal search bar
+
+//Impressions tracking
+ 'ecommerce': {
+    'impressions': [
+     {
+       // Name or ID is required
+       'name': {{contentName}}, //if available       
+       'id': {{moduleIDs_contentIDs}}, 
+       'position': {{positionInPage}} //eg 1 optional
+     },
+     {
+       // Name or ID is required
+       'name': {{contentName}}, //if available       
+       'id': {{moduleIDs_contentIDs}}, 
+       'position': {{positionInPage}} /eg 2 optional
+     }]
+
+});
+
+</script>
+
+//First GTM Container snippet
+
+...
+
+</head>
+
+<body>
+
+//Second GTM Container snippet
+
+...
+
+</body>

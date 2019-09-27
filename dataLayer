@@ -1,3 +1,4 @@
+//DATALAYER
 <head>
 
 <script>
@@ -7,53 +8,46 @@ window.dataLayer = window.dataLayer || []; //Creating the dataLayer object
 dataLayer.push({
 
 //Page details
-‘pageName’: {{pageName}}, //Dynamic page name
+'pageName': {{pageName}}, //Dynamic page name (epc-onboarding-web.JoinRootPageController.getJoinRoot)
+'applicationName': {{applicationName}}, //Application name (epc-onboarding-web)
+'applicationEnvironment': {{applicationEnvironment}}, //environment name
+'country': {{country}}, //Based on IP
+'city': {{city}}, //Based on IP
+'locale': {{locale}}, //locale
 
-
+//Form data inserted by users
+'selectedLanguage': {{selectedLanguage}}, //selected language in the form
+'numOfProperties': {{numOfProperties}}, //number of properties with different addresses in the form
+'email': {{valid}}, //boolean populate if valid email collected
+'phoneCountryCode': {{phoneCountryCode}}, //phone country code collected
+'phone': {{valid}}, //boolean populate if valid phone number collected
+'companyName': {{companyName}}, //company name if available
+'propertyName': {{propertyName}}, //property name form
+'propertyAddress': {{propertyAddress}}, //concatenation of Address 1 and Address 2 form
+'propertyCity': {{propertyCity}}, //property city form
+'propertyZip': {{propertyZip}}, //property zip form
+'propertyCountryRegion': {{propertyCountryRegion}}, //property country-region form
+'propertyStateProvince': {{propertyStateProvince}}, //property state-province if available form
+'propertyType': {{propertyType}}, //property type form
+'propertyWebsite': {{propertyWebsite}}, //property website form
+'propertyRooms': {{propertyRooms}}, //property number of rooms form
+'propertyChannelManager': {{propertyChannelManager}}, //yes-no channel manager
+'propertyChain': {{propertyChain}}, //yes-no belongs to a chain
 
 //IDs
-'GAID': {{cid}}, //Google Analytics client ID
-'EPCsessionID': {{EPCsessionID}}, //a common key between native app events and app-hosted reactive web-views
+'GAID': {{cid}}, //Google Analytics client ID (userId)
+'GUID': {{guid}}, //global unique identifier (guid)
+'EPCsessionID': {{EPCsessionID}}, //a common key between native app events and app-hosted reactive web-views (EPCSession)
 'MarketoID': {{MarketoID}}, //ID assigned by Marketo
-'XDID': {{XDID}}, //gives us the ability to track visitors/users across pretty much all EG sites eventually (including HomeAway)
-'PropertyID': {{EID}}, //Expedia ID
+'XDID': {{XDID}}, //gives us the ability to track visitors/users across pretty much all EG sites eventually (xdid)
+'joinExperimentID': {{joinExperimentID}}, //Join experiment ID (JOIN_EXPERIMENT_ID)
+'languageID': {{languageID}}, //language ID selected (UnoLangId)
+'PropertyID': {{EID}}, //Expedia ID if available in cookies (VSUPID)
 
-//Content details
-'Mode’: {{Mode}}, //Mode
-'Module': {{module}}, //Contactenation of modules deployed in page
-'Content': {{contentIDs}}, //Concatenation of content IDs deployed in page
-'Zone': {{zoneIDs}}, //Concatenation of zone IDs deployed in page
-'pageLayout': {{moduleIDs_contentIDs_zoneIDs}}, //Concatenation of module-content-zone IDs deployed in page regardless of whether or not they were visible
-
-//Content engagement - Data inserted by users
-'email': {{valid}}, //boolean populate if valid email collected
-'phone': {{valid}}, //boolean populate if valid phone number collected
-'propertyName': {{propertyName}}, //property name form
-'propertyStreet': {{propertyStreet}}, //property street form
-'propertyType': {{propertyType}}, //property type form
-'country': {{country}}, //country form
-'city': {{city}}, //city form
-'street': {{street}}, //street form
-'zip': {{zip}}, //zip form
-
-//Internal Search query
-'searchTerm': {{searchTerm}}, //term searched by the user in the internal search bar
-
-//Impressions tracking
- 'ecommerce': {
-    'impressions': [
-     {
-       // Name or ID is required
-       'name': {{contentName}}, //if available       
-       'id': {{moduleIDs_contentIDs}}, 
-       'position': {{positionInPage}} //eg 1 optional
-     },
-     {
-       // Name or ID is required
-       'name': {{contentName}}, //if available       
-       'id': {{moduleIDs_contentIDs}}, 
-       'position': {{positionInPage}} /eg 2 optional
-     }]
+//User
+'onBoarding': {{isOnboarding}}, //false/true
+'internalUser': {{isInternalUser}}, //internal user
+'isAutomatedUser': {{isAutomatedUser}} //automated user
 
 });
 

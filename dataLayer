@@ -35,14 +35,15 @@ dataLayer.push({
 'propertyChain': {{propertyChain}}, //yes-no belongs to a chain
 
 //IDs
-'GAID': {{cid}}, //Google Analytics client ID (userId)
+'GAID': {{cid}}, //Google Analytics client ID (userId/_gid)
 'GUID': {{guid}}, //global unique identifier (guid)
 'EPCsessionID': {{EPCsessionID}}, //a common key between native app events and app-hosted reactive web-views (EPCSession)
-'MarketoID': {{MarketoID}}, //ID assigned by Marketo
+'MarketoID': {{MarketoID}}, //ID assigned by Marketo (_mkto_trk)
 'XDID': {{XDID}}, //gives us the ability to track visitors/users across pretty much all EG sites eventually (xdid)
-'joinExperimentID': {{joinExperimentID}}, //Join experiment ID (JOIN_EXPERIMENT_ID)
-'languageID': {{languageID}}, //language ID selected (UnoLangId)
-'PropertyID': {{EID}}, //Expedia ID if available in cookies (VSUPID)
+'joinExperimentID': {{joinExperimentID}}, //Join experiment ID (JOIN_EXPERIMENT_ID/JOIN_EXPERIMENT_ID)
+'languageID': {{languageID}}, //language ID selected (UnoLangId/UnoLangId)
+'PropertyID': {{EID}}, //Expedia ID if available in cookies (VSUPID/VSUPID)
+'JoinID: {{JOIN_ID}}, //Join ID (JOIN_ID)
 
 //User
 'onBoarding': {{isOnboarding}}, //false/true

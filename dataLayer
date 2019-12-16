@@ -11,9 +11,12 @@ dataLayer.push({
 'pageName': {{pageName}}, //Dynamic page name (epc-onboarding-web.JoinRootPageController.getJoinRoot)
 'applicationName': {{applicationName}}, //Application name (epc-onboarding-web)
 'applicationEnvironment': {{applicationEnvironment}}, //environment name
+'locale': {{locale}}, //locale
+
+//Country and City not available
 'country': {{country}}, //Based on IP
 'city': {{city}}, //Based on IP
-'locale': {{locale}}, //locale
+
 
 //Form data inserted by users
 'selectedLanguage': {{selectedLanguage}}, //selected language in the form

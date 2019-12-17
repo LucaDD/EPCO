@@ -39,14 +39,16 @@ dataLayer.push({
 
 //IDs
 'GAID': {{cid}}, //Google Analytics client ID (userId/_gid)
-'GUID': {{guid}}, //global unique identifier (guid)
-'EPCsessionID': {{EPCsessionID}}, //a common key between native app events and app-hosted reactive web-views (EPCSession)
-'MarketoID': {{MarketoID}}, //ID assigned by Marketo (_mkto_trk)
+'GUID': {{DUAID}}, //global unique identifier - Long lived UUID specific to a device and user agent. This is the value of the DUAID cookie in BEX, the guid cookie for HCOM and the hav cookie for Vrbo (DUAID)
+'JSessionID': {{JSESSIONID}}, //J Session ID
+'EPCsessionID': {{EPCSession}}, //a common key between native app events and app-hosted reactive web-views (JSESSIONID)
+'MarketoID': {{_mkto_trk}}, //ID assigned by Marketo (_mkto_trk)
 'XDID': {{XDID}}, //gives us the ability to track visitors/users across pretty much all EG sites eventually (xdid)
-'joinExperimentID': {{joinExperimentID}}, //Join experiment ID (JOIN_EXPERIMENT_ID/JOIN_EXPERIMENT_ID)
-'languageID': {{languageID}}, //language ID selected (UnoLangId/UnoLangId)
-'PropertyID': {{EID}}, //Expedia ID if available in cookies (VSUPID/VSUPID)
 'JoinID: {{JOIN_ID}}, //Join ID (JOIN_ID)
+'joinExperimentID': {{JOIN_EXPERIMENT_ID}}, //Join experiment ID (JOIN_EXPERIMENT_ID)
+'languageID': {{languageID}}, //language ID selected (UnoLangId/UnoLangId)
+'PropertyID': {{VSUPID}}, //Expedia ID if available in cookies (VSUPID)
+
 
 //User
 'onBoarding': {{isOnboarding}}, //false/true

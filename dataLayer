@@ -41,6 +41,7 @@ dataLayer.push({
 'GAID': {{cid}}, //Google Analytics client ID (userId/_gid)
 'GUID': {{DUAID}}, //global unique identifier - Long lived UUID specific to a device and user agent. This is the value of the DUAID cookie in BEX, the guid cookie for HCOM and the hav cookie for Vrbo (DUAID)
 'JSessionID': {{JSESSIONID}}, //J Session ID
+'ApplicationID': {{ApplicationID_URL}}, //Join ID that you get in the URL
 'EPCsessionID': {{EPCSession}}, //a common key between native app events and app-hosted reactive web-views (JSESSIONID)
 'MarketoID': {{_mkto_trk}}, //ID assigned by Marketo (_mkto_trk)
 'XDID': {{XDID}}, //gives us the ability to track visitors/users across pretty much all EG sites eventually (xdid)
